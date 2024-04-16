@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="posts.css" />
+    <title>Posts</title>
+</head>
+
+<body>
+    <div class="mb-5">
+        <header>
+            <h1>Blog</h1>
+            <nav id="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Ultimos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <button>Suscribirse</button>
+
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="post.html">Posts</a></li>
+                    <li><a href="/#">Ultimos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="/#">Suscribirse</a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <main id="main-content" class="container">
+        <section class="border-top border-bottom">
+            <div class="container d-flex flex-row">
+                <p class="col-6 text-start">Nombre del autor</p>
+                <p class="col-6 text-end">14 de Abril del 2024</p>
+            </div>
+            <h1 class="text-bg-light text-wrap text-center rounded fs-2">Título del Post</h1>
+
+            <p class="fst-italic ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
+                obcaecati quaerat
+                fugiat laboriosam
+                ullam omnis minus ut fugit illo nobis reprehenderit placeat deserunt porro voluptatem possimus ipsum.
+                Dolore, corrupti illum?
+                Vitae ipsa inventore sit quibusdam dolor deleniti hic quisquam error possimus doloribus deserunt ratione
+                exercitationem quaerat similique harum odio accusantium, numquam quod ab voluptates officia. Doloremque
+                debitis porro sed molestiae?</p>
+            <img src="https://picsum.photos/id/100/600/400" class="rounded mb-3 rounded-start" alt="..." />
+            <h2 class="text-bg-light text-wrap text-center rounded fs-3">Subtítulo primera parte</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime hic exercitationem commodi perspiciatis,
+                at cumque, deleniti dolore quos molestias dolorem rerum quaerat error repellendus esse, voluptatibus
+                quasi est unde repudiandae.
+                Amet perferendis iste ab, eos laudantium quasi earum eligendi assumenda quia ipsam, unde ut minus sed
+                velit! Beatae deserunt officiis expedita ratione impedit quo optio voluptas, quisquam possimus
+                asperiores numquam.
+                Unde, adipisci eum eos dolorum odit similique accusamus eveniet temporibus fugiat molestiae perferendis
+                minus in. Reprehenderit impedit distinctio unde tenetur et fugiat necessitatibus? Expedita eaque
+                cupiditate dolor nobis molestias fugiat?
+                Aspernatur cumque architecto quo aliquam voluptates? Expedita laboriosam harum, dolor, consequatur alias
+                laborum laudantium provident voluptas ratione sit maiores nihil unde atque iure? Sunt dolorem odio dicta
+                libero numquam accusantium?
+                Minima fuga distinctio eum fugit natus possimus praesentium a placeat, exercitationem odit eius eveniet
+                obcaecati iure quaerat explicabo sapiente aperiam rerum facere saepe eligendi culpa, aliquid recusandae.
+                Dolor, laborum debitis.</p>
+            <h2 class="text-bg-light text-wrap text-center rounded fs-3">Subtítulo segunda parte</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolores repellat dicta soluta quo
+                repudiandae nemo dolorum aliquid, dolor nulla magni doloribus, illo deleniti minima. Nemo, tempore.
+                Quidem, doloribus maiores!
+                Illum provident expedita nulla, error, ea corrupti iusto consequatur facilis ad eveniet numquam iure.
+                Distinctio mollitia minus iusto ipsum, doloribus architecto assumenda cupiditate maxime itaque saepe
+                tenetur maiores voluptas sunt.
+                Debitis adipisci alias accusantium ipsa esse molestias? Assumenda eveniet quos ex, harum ea repellendus,
+                et esse sed dicta quas atque fuga enim corrupti error at amet eos aliquam tenetur numquam.
+                Dolorem corporis iusto velit, sapiente quis quaerat officiis deleniti dolore? Mollitia, nisi voluptate!
+                Vero, impedit enim? Eos asperiores deleniti modi aut perspiciatis eaque aliquam cum at obcaecati,
+                eligendi suscipit voluptate.
+                Sapiente exercitationem architecto fugit veniam quaerat, alias perferendis dolorum repellendus eaque
+                aspernatur non ratione, soluta cumque voluptatem tempore? Eum blanditiis eos recusandae id eligendi,
+                magni voluptas iusto a ducimus laboriosam?</p>
+        </section>
+
+        <aside class="container d-flex flex-row flex-wrap justify-content-between gap-3">
+            <h2 class="text-center col-12 fs-3">Otros post que podrían
+                interesarte</h2>
+
+            <article class="col-md-3 card text-bg-light border-dark mb-3">
+                <img src="https://picsum.photos/id/200/600/400" class="img-fluid rounded" alt="..." />
+                <div class="card-body">
+                    <h3 class="card-title fs-5">Título post</h3>
+                    <p class="card-text">
+                        Este es un resumen del texto del post. <br />
+                        <a href="#">Ver mas...</a>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </article>
+
+            <article class="col-md-3 card text-bg-light border-dark mb-3">
+                <img src="https://picsum.photos/id/200/600/400" class="img-fluid rounded" alt="..." />
+                <div class="card-body">
+                    <h3 class="card-title fs-5">Título post</h3>
+                    <p class="card-text">
+                        Este es un resumen del texto del post. <br />
+                        <a href="#">Ver mas...</a>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </article>
+
+            <article class="col-md-3 card text-bg-light border-dark mb-3">
+                <img src="https://picsum.photos/id/200/600/400" class="img-fluid rounded" alt="..." />
+                <div class="card-body">
+                    <h3 class="card-title fs-5">Título post</h3>
+                    <p class="card-text">
+                        Este es un resumen del texto del post. <br />
+                        <a href="#">Ver mas...</a>
+                    </p>
+                    <p class="card-text">
+                        <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    </p>
+                </div>
+            </article>
+        </aside>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+</body>
+
+</html>
