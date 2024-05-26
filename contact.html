@@ -44,28 +44,41 @@
         </header>
     </div>
 
-    <form id="main-content" class="container d-flex flex-column gap-3 justify-content rounded" action="#"
+    <form id="main-content formulario" class="container d-flex flex-column gap-3 justify-content rounded" action="#"
         autocomplete="on">
         <fieldset id="name" class="d-flex flex-row row-gap-3 flex-wrap justify-content-between">
             <div class="col-12 col-md-6">
-                <label for="first-name">Nombre</label>
-                <input type="text" id="first-name" name="first_name" class="d-block" required>
+                <label for="inputNombre">Nombre</label>
+                <input type="text" id="inputNombre" name="inputNombre" class="d-block">
+                <span id="nombre-error" class="error"></span>
             </div>
             <div class="col-12 col-md-6">
-                <label for="last-name">Apellido</label>
-                <input type="text" id="last-name" name="last_name" class="d-block" required>
+                <label for="inputApellido">Apellido</label>
+                <input type="text" id="inputApellido" name="inputApellido" class="d-block">
+                <span id="apellido-error" class="error"></span>
             </div>
         </fieldset>
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
-        <label for="subject">Asunto</label>
-        <input type="subject" id="subject" name="subject" required>
-        <label for="message">Mensaje</label>
-        <textarea id="message" name="message" rows="5" cols="30" placeholder="Ingrese su mensaje aquí"
-            required></textarea>
+        <span id="email-error" class="error"></span>
+
+        <label for="inputAsunto">Asunto</label>
+        <input type="subject" id="inputAsunto" name="inputAsunto">
+        <span id="asunto-error" class="error"></span>
+
+        <label for="inputMensaje">Mensaje</label>
+        <textarea id="inputMensaje" name="inputMensaje" rows="5" cols="30" placeholder="Ingrese su mensaje aquí"></textarea>
+        <span id="mensajeContacto-error" class="error"></span>
+
+        
+        <input type="checkbox" class="form-check-input" id="robotCheck">
+        <label class="form-check-label" for="robotCheck">No soy un robot</label>
+        <span id="robot-error" class="error"></span>          
+
         <input type="submit" class="button col-12 col-md-3 col-lg-2 align-self-center" value="Enviar">
     </form>
 
+    <script src="./validator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

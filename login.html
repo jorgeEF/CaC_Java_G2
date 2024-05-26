@@ -45,23 +45,27 @@
     </div>
 
     <div class="container w-50 d-flex justify-content-center">
-        <form>
+        <form class="formulario">
             <div class="mb-3">
               <label for="inputEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" required>       
+              <input type="email" class="form-control" id="inputEmail" required>
+              <span id="email-error" class="error"></span>    
             </div>
             <div class="mb-3">
               <label for="inputPassword" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="inputPassword" required>
+              <span id="password-error" class="error"></span>
             </div>
             <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+              <input type="checkbox" class="form-check-input" id="robotCheck">
+              <label class="form-check-label" for="robotCheck">No soy un robot</label>
+              <span id="robot-error" class="error"></span>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
     </div>
     
+    <script src="./validator.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
