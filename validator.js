@@ -1,80 +1,134 @@
-// obtener el formulario
-const formulario = document.getElementById('formulario')
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('loginForm');
+    const contactForm = document.getElementById('contactForm');
 
-// capturamos de evento submit para validar los campos
-formulario.addEventListener('submit', evento => {
-    // detener envio hasta validar
-    evento.preventDefault();
-    // validar campos y enviar
-    if(validarFormulario()){
-        formulario.submit();
+    if (loginForm) {
+        loginForm.addEventListener('submit', evento => {
+            evento.preventDefault();
+            if (validarLoginForm()) {
+                loginForm.submit();
+            }
+        });
     }
-})
 
-// funcion para mostrar un mensaje de error al no completar campo
-function mostrarError(campo, mensaje){
+    if (contactForm) {
+        contactForm.addEventListener('submit', evento => {
+            evento.preventDefault();
+            if (validarContactForm()) {
+                contactForm.submit();
+            }
+        });
+    }
+});
+
+function mostrarError(campo, mensaje) {
     const campoError = document.getElementById(`${campo}-error`);
-    campoError.innerText = mensaje;
+    if (campoError) {
+        campoError.innerText = mensaje;
+        campoError.style.color = 'red';
+    }
 }
 
-// funcion para validar email usando regex
-function validarEmail(email){
+function limpiarError(campo) {
+    const campoError = document.getElementById(`${campo}-error`);
+    if (campoError) {
+        campoError.innerText = '';
+    }
+}
+
+function validarEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email)
+    return regex.test(email);
 }
 
-// funcion para validar datos de campos
-function validarFormulario() {
-    // obtener valores de los campos    
-    const nombre = document.getElementById('inputNombre').value
-    const apellido = document.getElementById('inputApellido').value
-    const asunto = document.getElementById('inputAsunto').value
-    const mensajeContacto = document.getElementById('inputMensaje').value
-    const email = document.getElementById('inputEmail').value
-    const password = document.getElementById('inputPassword').value
-    const robotCheck = document.getElementById('robotCheck').value
+function validarLoginForm() {
+    const email = document.getElementById('inputEmail').value.trim();
+    const password = document.getElementById('inputPassword').value.trim();
+    const robotCheck = document.getElementById('robotCheck').checked;
 
-    // validar cada campo
-    if(nombre === ''){
-        mostrarError('nombre','Por favor ingresa tu nombre')
-        return false;
+    let formularioValido = true;
+
+    if (email === '') {
+        mostrarError('email', 'Por favor ingresa tu email');
+        formularioValido = false;
+    } else if (!validarEmail(email)) {
+        mostrarError('email', 'Por favor ingresa un email válido');
+        formularioValido = false;
+    } else {
+        limpiarError('email');
     }
 
-    if(apellido === ''){
-        mostrarError('apellido','Por favor ingresa tu apellido')
-        return false;
+    if (password === '') {
+        mostrarError('password', 'Contraseña/usuario incorrecta');
+        formularioValido = false;
+    } else {
+        limpiarError('password');
     }
 
-    if(asunto === ''){
-        mostrarError('asunto','Por favor ingresa el asunto')
-        return false;
+    if (!robotCheck) {
+        mostrarError('robot', 'No se pudo validar que no es un robot');
+        formularioValido = false;
+    } else {
+        limpiarError('robot');
     }
 
-    if(mensajeContacto === ''){
-        mostrarError('mensajeContacto','Por favor ingresa un mensaje')
-        return false;
+    return formularioValido;
+}
+
+function validarContactForm() {
+    const nombre = document.getElementById('inputNombre').value.trim();
+    const apellido = document.getElementById('inputApellido').value.trim();
+    const email = document.getElementById('inputEmail').value.trim();
+    const asunto = document.getElementById('inputAsunto').value.trim();
+    const mensaje = document.getElementById('inputMensaje').value.trim();
+    const robotCheck = document.getElementById('robotCheck').checked;
+
+    let formularioValido = true;
+
+    if (nombre === '') {
+        mostrarError('nombre', 'Por favor ingresa tu nombre');
+        formularioValido = false;
+    } else {
+        limpiarError('nombre');
     }
 
-    if(email === ''){
-        mostrarError('email','Por favor ingresa tu email')
-        return false;
-    }
-    if(!validarEmail(email)){
-        mostrarError('email','Por favor ingresa un email válido')
-        return false;
+    if (apellido === '') {
+        mostrarError('apellido', 'Por favor ingresa tu apellido');
+        formularioValido = false;
+    } else {
+        limpiarError('apellido');
     }
 
-    if(password === ''){
-        mostrarError('password','Contraseña/usuario incorrecta')
-        return false;
+    if (email === '') {
+        mostrarError('email', 'Por favor ingresa tu email');
+        formularioValido = false;
+    } else if (!validarEmail(email)) {
+        mostrarError('email', 'Por favor ingresa un email válido');
+        formularioValido = false;
+    } else {
+        limpiarError('email');
     }
 
-    if(robotCheck !== true){
-        mostrarError('robot','No se pudo validar que no es un robot')
-        return false;
+    if (asunto === '') {
+        mostrarError('asunto', 'Por favor ingresa el asunto');
+        formularioValido = false;
+    } else {
+        limpiarError('asunto');
     }
 
-    return true;
+    if (mensaje === '') {
+        mostrarError('mensajeContacto', 'Por favor ingresa un mensaje');
+        formularioValido = false;
+    } else {
+        limpiarError('mensajeContacto');
+    }
 
+    if (!robotCheck) {
+        mostrarError('robot', 'No se pudo validar que no es un robot');
+        formularioValido = false;
+    } else {
+        limpiarError('robot');
+    }
 
+    return formularioValido;
 }

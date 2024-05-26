@@ -18,33 +18,33 @@
             <h1>Contactanos</h1>
             <nav id="nav-desktop">
                 <ul>
-                  <li><a href="./index.html">Inicio</a></li>
-                  <li><a href="#">Categorias</a></li>
-                  <!-- <li><a href="#">Ultimos</a></li> -->
-                  <li><a href="contact.html">Contacto</a></li>
-                  <li><a href="login.html">Login</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <!-- <li><a href="#">Ultimos</a></li> -->
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
-              </nav>
-              <button>Suscribirse</button>
-        
-              <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            </nav>
+            <button>Suscribirse</button>
+
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
                 <ul class="mobile-menu">
-                  <li><a href="./index.html">Inicio</a></li>
-                  <li><a href="#">Categorias</a></li>
-                  <!-- <li><a href="post.html">Posts</a></li> -->
-                  <!-- <li><a href="/#">Ultimos</a></li> -->
-                  <li><a href="contact.html">Contacto</a></li>
-                  <li><a href="login.html">Login</a></li>
-                  <li><a href="/#">Suscribirse</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <!-- <li><a href="post.html">Posts</a></li> -->
+                    <!-- <li><a href="/#">Ultimos</a></li> -->
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="/#">Suscribirse</a></li>
                 </ul>
-              </div>
+            </div>
         </header>
-    </div>
+    </div>    
 
-    <form id="main-content formulario" class="container d-flex flex-column gap-3 justify-content rounded" action="#"
+    <form id="contactForm" class="container d-flex flex-column gap-3 justify-content rounded" action="#"
         autocomplete="on">
         <fieldset id="name" class="d-flex flex-row row-gap-3 flex-wrap justify-content-between">
             <div class="col-12 col-md-6">
@@ -58,21 +58,22 @@
                 <span id="apellido-error" class="error"></span>
             </div>
         </fieldset>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <label for="inputEmail">Email</label>
+        <input type="email" id="inputEmail" name="inputEmail">
         <span id="email-error" class="error"></span>
 
         <label for="inputAsunto">Asunto</label>
-        <input type="subject" id="inputAsunto" name="inputAsunto">
+        <input type="text" id="inputAsunto" name="inputAsunto">
         <span id="asunto-error" class="error"></span>
 
         <label for="inputMensaje">Mensaje</label>
-        <textarea id="inputMensaje" name="inputMensaje" rows="5" cols="30" placeholder="Ingrese su mensaje aquí"></textarea>
+        <textarea id="inputMensaje" name="inputMensaje" rows="5" cols="30"
+            placeholder="Ingrese su mensaje aquí"></textarea>
         <span id="mensajeContacto-error" class="error"></span>
-        
+
         <input type="checkbox" class="form-check-input" id="robotCheck">
         <label class="form-check-label" for="robotCheck">No soy un robot</label>
-        <span id="robot-error" class="error"></span>          
+        <span id="robot-error" class="error"></span>
 
         <input type="submit" class="button col-12 col-md-3 col-lg-2 align-self-center" value="Enviar">
     </form>
