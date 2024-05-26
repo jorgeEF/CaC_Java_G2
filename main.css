@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+
+:root {
+  --fondo: #aad7d9;
+  --decoraciones: #92c7cf;
+  --fuente: #5ea1ac;
+  --fuente-fuerte: #4e7391;
+  --blanco: #fbf9f1;
+  --gris: #e5e1da;
+}
+
 body {
-  background-color: #074173;
-  color: #fff;
+  background-color: var(--fondo);
+  color: var(--fuente-fuerte);
 }
 
 header {
@@ -18,12 +29,16 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
-a:hover {
-  border-bottom: 1px solid #5fbdff;
-  color: #5fbdff;
+nav ul a {
+  text-decoration: none;
+  color: var(--fuente);
+}
+
+nav ul a:hover {
+  text-decoration: none;
+  color: var(--fuente-fuerte);
   transition: all 0.1s;
 }
 
@@ -41,7 +56,7 @@ li {
 }
 
 button {
-  background-color: #1679ab;
+  background-color: var(--fuente-fuerte);
   border: 0;
   border-radius: 25px;
   outline: none;
@@ -54,7 +69,7 @@ header button {
 }
 
 button:hover {
-  background-color: #5fbdff;
+  background-color: var(--fuente);
   transition: background-color 0.3s;
 }
 
@@ -137,8 +152,21 @@ button:hover {
 
   #nav-desktop {
     display: flex;
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
   }
+
   header button {
     display: block;
   }
+}
+
+footer {
+  font-family: "Concert One", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1rem;
+  color: #202020;
 }
