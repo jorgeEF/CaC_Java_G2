@@ -18,50 +18,55 @@
             <h1>Iniciar sesión</h1>
             <nav id="nav-desktop">
                 <ul>
-                  <li><a href="./index.html">Inicio</a></li>
-                  <li><a href="#">Categorias</a></li>
-                  <!-- <li><a href="#">Ultimos</a></li> -->
-                  <li><a href="contact.html">Contacto</a></li>
-                  <li><a href="login.html">Login</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <!-- <li><a href="#">Ultimos</a></li> -->
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
-              </nav>
-              <button>Suscribirse</button>
-        
-              <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            </nav>
+            <button>Suscribirse</button>
+
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
                 <ul class="mobile-menu">
-                  <li><a href="./index.html">Inicio</a></li>
-                  <li><a href="#">Categorias</a></li>
-                  <!-- <li><a href="post.html">Posts</a></li> -->
-                  <!-- <li><a href="/#">Ultimos</a></li> -->
-                  <li><a href="contact.html">Contacto</a></li>
-                  <li><a href="login.html">Login</a></li>
-                  <li><a href="/#">Suscribirse</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <!-- <li><a href="post.html">Posts</a></li> -->
+                    <!-- <li><a href="/#">Ultimos</a></li> -->
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="/#">Suscribirse</a></li>
                 </ul>
-              </div>
+            </div>
         </header>
-    </div>
+    </div>    
 
     <div class="container w-50 d-flex justify-content-center">
-        <form>
+        <form id="loginForm">
             <div class="mb-3">
-              <label for="inputEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" required>       
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail">
+                <span id="email-error" class="error"></span>
             </div>
             <div class="mb-3">
-              <label for="inputPassword" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="inputPassword" required>
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword">
+                <span id="password-error" class="error"></span>
             </div>
             <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">No soy un robot</label>
+                <input type="checkbox" class="form-check-input" id="robotCheck">
+                <label class="form-check-label" for="robotCheck">No soy un robot</label>
+                <span id="robot-error" class="error"></span>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
-          </form>
+        </form>
     </div>
-    
+
+
+    <script src="./validator.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
